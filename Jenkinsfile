@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker compose build'
+        sh 'docker-compose build'
         echo 'Docker-compose-build Build image completed'
       }
     }
