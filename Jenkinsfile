@@ -2,6 +2,7 @@ pipeline {
   agent any
   environment {
     DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+    DOCKER_IMAGE = 
   }
   stages {
     stage('Build') {
@@ -18,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push priya20xenonstack/drupalmysql-compose:$BUILD_NUMBER'
+        sh 'docker-compose push'
         echo 'Login Completed'
       }
     }
