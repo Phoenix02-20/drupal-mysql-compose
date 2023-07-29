@@ -2,7 +2,6 @@ pipeline {
   agent any
   environment {
     DOCKERHUB_CREDENTIALS = credentials('dockerhub')
-    DOCKER_IMAGE = 
   }
   stages {
     stage('Build') {
