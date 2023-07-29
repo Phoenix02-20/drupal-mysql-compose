@@ -1,7 +1,7 @@
 version: '3.3'
 services:
         drupal:
-                image: drupal:latest
+                image: priya20xenonstack/drupal:latest
                 ports:
                         - 80:80
                 volumes:
@@ -11,7 +11,7 @@ services:
                 restart: always
 
         mysql:
-                image: mysql:latest
+                image: priya20xenonstack/mysql:latest
                 environment:
                         - MYSQL_DATABASE=drupal
                         - MYSQL_USER=user
